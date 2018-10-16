@@ -1,0 +1,16 @@
+server:
+  port: 8881
+spring:
+  rabbitmq:
+#    配置自己的rabbitmq
+    host: 8888
+    port: 5672
+    username: 888
+    password: 888
+    publisher-confirms: true #开启发送确认
+    publisher-returns: true #开启发送失败退回
+    listener: #开启ACK
+      direct:
+        acknowledge-mode: manual
+      simple:
+        acknowledge-mode: manual
